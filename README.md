@@ -1,5 +1,9 @@
 # Laravel Nova Checklist Field
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mxms/checklist.svg)](https://packagist.org/packages/mxms/checklist)
+[![License](https://img.shields.io/packagist/l/mxms/checklist.svg)](https://packagist.org/packages/mxms/checklist)
+[![Total Downloads](https://img.shields.io/packagist/dt/mxms/checklist.svg)](https://packagist.org/packages/mxms/checklist)
+
 Maximus Agency are bespoke cloud software developers in Perth, Australia. You'll find more information about us [on our website](https://maximus.agency).
 
 This package is made to allow you to easily create checklists in Laravel Nova. All you need is a text/json column on your model to store the checklist items and keep track of their status (completion).
