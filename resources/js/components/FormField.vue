@@ -35,7 +35,7 @@ export default {
     return {
       itemsKey: 1,
       selectedTemplate: '',
-      templates: {},
+      templates: this.useTemplates ? {} : null,
       selectedTemplateTitle: null,
       selectedTemplateId: null
     }
