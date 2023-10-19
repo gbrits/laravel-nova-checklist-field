@@ -1,0 +1,25 @@
+{
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": [
+            {
+                "scope": "punctuation.definition.comment",
+                "settings": {
+                    "foreground": "#2dc672"
+                }
+            },
+            {
+                "scope": "keyword.other.phpdoc.php,comment.block.documentation.phpdoc.php",
+                "settings": {
+                    "foreground": "#2dc672"
+                }
+            },
+            {
+                "scope": "meta.other.type.phpdoc.php,comment.block.documentation.phpdoc.php",
+                "settings": {
+                    "foreground": "#187c35"
+                }
+            }
+        ]
+    }
+}
