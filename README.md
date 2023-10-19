@@ -12,7 +12,7 @@ You can install the package via composer:
 
 
 ```bash
-composer require gbrits/laravel-nova-checklist-field
+composer require mxms/checklist
 ```
 
 ## Usage
