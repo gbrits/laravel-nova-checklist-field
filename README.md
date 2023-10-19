@@ -59,19 +59,6 @@ This package also has an optional extra of allowing 'checklist templates'.
 Templates are drawn via Axios hard-coded for now. 
 Follow-up work will be done to make the templates a parameter to toggle and enter the endpoint in. Feel free to submit a PR.
 
-```php
-
-use Mxms\Checklist\Checklist;
-
-Checklist::make('Tasks')
-    ->placeholder('Add task ')
-    ->withPlaceholderCount()
-    ->logUsers()
-    ->showTimestamps()
-    ->showItemStatusOnIndex()
-    ->showCompletionOnIndex(),
-```
-
 ## License
 
 The MIT License (MIT).
