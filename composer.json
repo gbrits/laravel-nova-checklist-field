@@ -1,13 +1,15 @@
 {
     "name": "mxms/checklist",
-    "description": "A Laravel Nova field.",
+    "description": "Allows you to add checklists to Nova resources.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "checklists"
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0",
+        "laravel/nova": "^4.0"
     },
     "autoload": {
         "psr-4": {
