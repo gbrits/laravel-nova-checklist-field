@@ -43,12 +43,17 @@ class Checklist extends Field
     {
         return $this->withMeta(['placeholder_count' => true]);
     }
-
-    protected function fillAttributeFromRequest(NovaRequest $request,
-                                                $requestAttribute,
-                                                $model,
-                                                $attribute)
+    public function useTemplates($endpoint)
     {
+        return $this->withMeta(['endpoint' => $endpoint]);
+    }
+
+    protected function fillAttributeFromRequest(
+        NovaRequest $request,
+        $requestAttribute,
+        $model,
+        $attribute
+    ) {
         if ($request->exists($requestAttribute)) {
             $model->{$attribute} = $request[$requestAttribute];
         }

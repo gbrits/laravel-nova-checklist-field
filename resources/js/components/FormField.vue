@@ -6,7 +6,7 @@
       :full-width-content="true"
   >
       <template #field>
-        <div>
+        <div v-if="templates && templates.length">
           Populate from Template <em>(Optional)</em>: <select style="border: 1px solid #cbd5e1;
           padding: 5px 10px;
           border-radius: 3px;
@@ -44,6 +44,8 @@ export default {
   methods: {
 
       populateCriteria($event) {
+        if (!this.templates) return;  // Skip if no templates
+
         const template = this.templates.find(t => t.title == this.selectedTemplate);
         if(template && 'criteria' in template) {
           this.selectedTemplateTitle = template.title;
@@ -55,16 +57,21 @@ export default {
       },
 
       retrieveTemplates() {
-        const that = this;
-        Nova.request().get('/nova-vendor/options/checklist-templates').then(function (resp) {
-          that.templates = resp.data;
-        });
+          if (!this.field.endpoint) return;  // Skip if no endpoint set
+
+          const that = this;
+          Nova.request().get(this.field.endpoint).then(function (resp) {
+              that.templates = resp.data;
+          });
       },
 
       setInitialValue() {
-        this.retrieveTemplates();
-        this.value = JSON.parse(this.field.value) || [];
+          if (this.field.endpoint) {  // Only retrieve if endpoint exists
+              this.retrieveTemplates();
+          }
+          this.value = JSON.parse(this.field.value) || [];
       },
+
 
       fill(formData) {
         
