@@ -1,6 +1,6 @@
 {
     "name": "mxms/checklist",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Allows you to add checklists to Nova resources.",
     "keywords": [
         "laravel",
