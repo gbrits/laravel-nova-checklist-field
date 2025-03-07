@@ -73,7 +73,7 @@
             },
             secondLineText(){
                 if(this.completedAt && this.field.user){
-                    return `Completed by ${this.field.user} - ${this.completedAt}`;
+                    return `Completed by ${this.item.completed_by} - ${this.completedAt}`;
                 }
                 if(this.field.show_timestamps && this.completedAt){
                     return this.completedAt;
