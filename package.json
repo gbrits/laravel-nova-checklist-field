@@ -20,5 +20,6 @@
   },
   "dependencies": {
     "moment": "^2.29.4"
-  }
+  },
+  "version": "0.0.1"
 }
